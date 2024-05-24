@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="assets/scripts/script.js" defer></script>
+    <title>Opec</title>
+</head>
+
+<body>
+    <div id="page">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Opec Logo">
+            </div>
+            <nav class="navs">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Our Projects</a></li>
+                    <li><a href="#about">About us</a></li>
+                </ul>
+            </nav>
+
+            <button class="contact-button">Contact us</button>
+            <div class="mobile-navs">
+                <div class="icon">
+                    <img class="show" src="assets/icons/menu.png">
+
+                </div>
+                <div class="page">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Opec Logo">
+                    </div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Our Projects</a></li>
+                        <li><a href="#about">About us</a></li>
+                    </ul>
+                </div>
+                <div class="droplet">
+                </div>
+            </div>
+        </header>
+        <section id="hero">
+            <div class="bg-components">
+                <div class="left-gradient"></div>
+                <div class="right-gradient"></div>
+            </div>
+            <div class="description">
+                <h1 class="title">Build Your Awesome Website</h1>
+                <p class="details">
+                    Opec studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
+                </p>
+                <button class="action-button">
+                    <soan>Our Services</soan>
+                    <img src="/assets/icons/hero-action-icon.png">
+                </button>
+            </div>
+            <div class="hero-image">
+                <img class="top-left" src="assets/icons/icon-1.png">
+                <img class="bottom-left" src="assets/icons/icon-2.png">
+                <img class="top-right" src="assets/icons/icon-3.png">
+                <img class="bottom-right" src="assets/icons/icon-4.png">
+                <img class="main" src="assets/images/hero-image.png">
+            </div>
+        </section>
+        <section id="services">
+            <h1 class="title">
+                <div class="text">The Service We Provide For You</div>
+            </h1>
+            <div class="services">
+                <div class="service">
+                    <img src="assets/icons/services-uxui.png">
+                    <h2 class="title">UI/UX Design</h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="dot"></div>
+                </div>
+                <div class="service">
+                    <img src="assets/icons/services-graphic.png">
+                    <h2 class="title">Web Development</h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="dot"></div>
+                </div>
+                <div class="service">
+                    <img src="assets/icons/services-motion.png">
+                    <h2 class="title">Mobile Development</h2>
+                    <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="icons">
+                <img class="top-left" src="assets/icons/icon-3.png">
+                <img class="top-right" src="assets/icons/icon-4.png">
+                <img class="bottom-left" src="assets/icons/icon-4.png">
+            </div>
+        </section>
+        <section id="portfolio">
+            <h1 class="title">
+                <div class="text">Our Awesome Portofolio</div>
+            </h1>
+            <div class="filters">
+                <button data-category="all" class="filter active">All</button>
+                <button data-category="websites" class="filter">Websites</button>
+                <button data-category="apps" class="filter">Apps</button>
+                <button data-category="newsletters" class="filter">Newsletters</button>
+            </div>
+            <div class="portfolios">
+                <div class="portfolio" data-category="apps">
+                    <div class="image" style="background-image:url('/assets/images/portfolio-app-1.png')">
+                    </div>
+                    <div class="content">
+                        <h2 class="title">Videopad</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+                <div class="portfolio" data-category="websites">
+                    <div class="image" style="background-image:url('/assets/images/portfolio-website-1.png')">
+                    </div>
+                    <div class="content">
+                        <h2 class="title">Pranto</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="more">
+                            View More
+                        </button>
+                    </div>
+                </div>
+                <div class="portfolio" data-category="newsletters">
+                    <div class="image" style="background-image:url('/assets/images/portfolio-newsletter-1.png')">
+                    </div>
+                    <div class="content">
+                        <h2 class="title">DigiTeck</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <button class="more">
+                            View More
+                        </button>
+                    </div>
+                </div>
+                <div class="portfolio" data-category="all" data-show="main" >
+                    <div class="image" style="background-image:url('/assets/images/portfolio-all-1.png')">
+                    </div>
+                    <div class="content">
+                        <h2 class="title">ConceptZilla</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <button class="more">
+                            View More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="bg-components">
+                <div class="left-gradient"></div>
+                <div class="right-gradient"></div>
+                <div class="big-gradient"></div>
+            </div>
+        </section> 
+        <section id="reviews">
+            <div class="heading">
+                <h1 class="title">
+                    <div class="text">What Our Client Says</div>
+                </h1>
+                <div class="direction">
+                    <div class="prev arrow">
+                        <img src="assets/icons/arrow-left.png">
+                    </div>
+                    <div class="next arrow active">
+                        <img src="assets/icons/arrow-right.png">
+                    </div>
+                </div>
+            </div>
+            <div class="reviews">
+                <div class="review" data-show="main">
+                    <div class="image" style="background-image: url(/assets/images/review-1.png);">
+                    </div>
+                    <div class="content">
+                        
+                        <h2 class="title">Great Design!</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="stars">
+                            <img src="assets/icons/stars.png">
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/author-1.png">
+                            <div class="details">
+                                <h3 class="name">Foster Richmond</h3>
+                                <p class="position">Product Manager DigiTeck</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image" style="background-image: url(/assets/images/review-1.png);">
+                    </div>
+                    <div class="content">
+                        
+                        <h2 class="title">Great Design!</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="stars">
+                            <img src="assets/icons/stars.png">
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/author-1.png">
+                            <div class="details">
+                                <h3 class="name">Foster Richmond</h3>
+                                <p class="position">Product Manager DigiTeck</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="image" style="background-image: url(/assets/images/review-1.png);">
+                    </div>
+                    <div class="content">
+                        
+                        <h2 class="title">Great Design!</h2>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <div class="stars">
+                            <img src="assets/icons/stars.png">
+                        </div>
+                        <div class="author">
+                            <img src="assets/images/author-1.png">
+                            <div class="details">
+                                <h3 class="name">Foster Richmond</h3>
+                                <p class="position">Product Manager DigiTeck</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons">
+                    <img class="top-left" src="assets/icons/icon-1.png">
+                    <img class="top-right" src="assets/icons/icon-4.png">
+                    <img class="bottom-left" src="assets/icons/icon-3.png">
+                </div>
+            </div>
+        </section> 
+        <footer>
+             <div class="content">
+                <div class="aboutus">
+                    <div class="logo">
+                        <img src="assets/images/logo.png" alt="Opec Logo">
+                    </div>
+                    <div class="address">
+                        <div class="title">
+                            Our Address
+                        </div>
+                        <div class="details">
+                            246 4th Avenue<br>
+                            New York, NY 10001<br>
+                            United States
+                        </div>
+                    </div>
+                    <div class="contacts">
+                        <div class="title">
+                            Our Contacts
+                        </div>
+                        <div class="details">
+                            info@opec.com<br>
+                            548-548-8589
+                        </div>
+                    </div>
+                    <div class="socials">
+                        <img src="assets/icons/facebook.png">
+                        <img src="assets/icons/twitter.png">
+                        <img src="assets/icons/instagram.png">
+                        <span>&nbsp;&nbsp;- &nbsp;follow us</span>
+                    </div>
+                </div>
+                <div class="form">
+                   <div class="title">
+                        Contact Us
+                   </div>
+                   <form>
+                        <input class="input name" type="text" placeholder="Name">
+                        <input class="input email"type="email" placeholder="Email">
+                        <!-- contact number -->
+                        <input class="input phone"type="tel" placeholder="Contact Number">
+                        <textarea class="input message"placeholder="Message"></textarea>
+                        <button class="button">Send Message</button>
+                   </form>
+                </div>
+             </div>
+             <div class="legal">
+                <div class="links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+                <div class="copyright">
+                    © 2022 Opec, All Rights Reserved
+                </div>
+             </div>
+        </footer>
+    </div>
+</body>
+
+</html>
