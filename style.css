@@ -31,12 +31,15 @@ a:link,a:visited,a:hover,a:active {
   text-decoration: none;
   color: inherit;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: var(--black);
   width:100%;
   overflow-x: hidden ;
   overflow-y: auto;
+  
 }
 
 #page{
@@ -50,7 +53,11 @@ body{
     padding: 20px;
   }
 }
-
+@media (max-width: 768px){
+  #page{
+    padding-top: 35px;
+  }
+}
 /* header */
 header {
   width:100%;
@@ -61,9 +68,42 @@ header {
   align-items: center;
   justify-items: center;
   font-family: var(--font-nunito);
-  position: relative;
+  position: sticky;
+  top:0px;
+  z-index: 2;
+  padding:20px 0;
+  
 }
-
+header.scrolled::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--black);
+  z-index: -1;
+}
+header.scrolled::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--black);
+  z-index: -1;
+}
+header.scrolled {
+  background-color: var(--black);
+  box-shadow: 0 0 10px rgba(0,0,0);
+}
+/* @media screen and (max-width: 1024px) {
+  header {
+    margin-left: -20px;
+  margin-right: -20px;
+  }
+} */
 header .logo {
   grid-column: 1;
   justify-self: start;
@@ -364,18 +404,9 @@ header .mobile-navs .droplet.active{
   }
 }
 #hero .hero-image{
-  /* grid-column: 2; */
-  /* border: 1px solid red; */
-  /* background-image: url('/assets/images/hero-image.png'); */
-  /* background-size: 100%;
-  background-repeat: no-repeat; */
-  /* height:100%;
-  width:100%; */
   position: relative;
-  /* background-position: 0 50px ; */
   margin-left:-150px;
   margin-bottom: -90px;
-  /* padding-bottom: 100px; */
 }
 /* @media screen and (max-width: 1024px) {
   #hero .hero-image{
@@ -587,7 +618,37 @@ header .mobile-navs .droplet.active{
   width: 467px;
   border: 1px solid red;
 }
-
+@media screen and (max-width: 768px) {
+  #hero .bg-components .left-gradient{
+    background: linear-gradient(180deg, rgba(255, 81, 81, 0.26) 0%, rgba(255, 81, 81, 0.113) 100%);
+      background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
+    border-radius: 233.5px;
+    filter: blur(300px);
+    height: 668px;
+    left: -30px;
+    position: absolute;
+    top: -30px;
+    transform: rotate(-30.37deg);
+    width: 252px;
+    border: 1px solid red;
+  }
+  
+  #hero .bg-components .right-gradient{
+    background: linear-gradient(180deg, rgba(255, 81, 81, 0.26) 0%, rgba(255, 81, 81, 0.113) 100%);
+    background-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
+    border-radius: 233.5px;
+    filter: blur(300px);
+    height: 644px;
+    position: absolute;
+    right: 30px;
+    top: 300px;
+    transform: rotate(35deg);
+    width: 215.77px;
+    border: 1px solid red;
+  }
+}
 /* services */
 #services {
   width:100%;
@@ -836,7 +897,7 @@ header .mobile-navs .droplet.active{
   #portfolio .portfolios .portfolio .image{
     background-repeat: no-repeat;
     background-size: cover;
-    
+    height: 220px;
   }
 }
 #portfolio .portfolios .portfolio:not([data-show="main"]) .content{
@@ -862,6 +923,7 @@ header .mobile-navs .droplet.active{
   word-spacing: -0.5px;
   line-height: 28px;
   padding-top:30px;
+  height:44px;
 }
 /* #portfolio .portfolios .portfolio:not([data-show="main"]) .description{
   order: 1;
@@ -937,7 +999,7 @@ header .mobile-navs .droplet.active{
 }
 @media screen and (max-width: 768px) {
   #portfolio .mobile-direction{
-    padding-top: 50px;
+    padding-top: 70px;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -948,6 +1010,11 @@ header .mobile-navs .droplet.active{
   position: absolute;
   z-index: -1;
   height:0;
+}
+@media screen and (max-width: 768px) {
+  #portfolio .bg-components{
+    display: none;
+  }
 }
 #portfolio .bg-components .big-gradient{
   background: linear-gradient(180deg, rgba(251.00000023841858, 168.00003558397293, 27.999998331069946, 0.047999999642372115) 0%, rgba(224.000001847744, 86.00001007318497, 136.00002229213715, 0.01800000031292437) 100%);
@@ -1141,8 +1208,11 @@ header .mobile-navs .droplet.active{
     /* display:grid; */
     grid-template-columns: unset;
     grid-template-rows: auto auto;
+    order: 1;
     /* width: 564px; */
-    
+  }
+  #reviews .reviews .review:not([data-show="main"]){
+    order: 2;
   }
 }
 #reviews .review .image{
@@ -1549,8 +1619,4 @@ footer .legal .links a{
   text-decoration: none;
   
   margin-right: 20px;
-}
-
-form input:invalid {
-  border-color: red;
 }
