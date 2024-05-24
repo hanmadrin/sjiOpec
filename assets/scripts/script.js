@@ -42,6 +42,30 @@ filters.forEach(filter => {
 });
 
 
+// form validation
+const form = document.querySelector('form');
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.querySelector('form input[name="name"]').value;
+    const email = document.querySelector('form input[name="email"]').value;
+    const message = document.querySelector('form textarea[name="message"]').value;
+    if (name.trim() === '') {
+        alert('Name is required');
+        return;
+    }
+    if (email.trim() === '') {
+        alert('Email is required');
+        return;
+    }
+    if (message.trim() === '') {
+        alert('Message is required');
+        return;
+    }
+    alert('Form submitted successfully');
+    form.reset();
+});
+
+
 
 
 
