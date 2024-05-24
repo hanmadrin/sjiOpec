@@ -187,32 +187,32 @@ filters.forEach(filter => {
 
 
 // form validation
-const form = document.querySelector('form');
-// on onkeyup remove error message
-form.addEventListener('keyup', function(e) {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-        e.target.classList.remove('error');
-    }
-});
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.querySelector('form input[name="name"]').value;
-    const email = document.querySelector('form input[name="email"]').value;
-    const message = document.querySelector('form textarea[name="message"]').value;
-    if (name.trim() === '') {
+// const form = document.querySelector('form');
+// // on onkeyup remove error message
+// form.addEventListener('keyup', function(e) {
+//     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+//         e.target.classList.remove('error');
+//     }
+// });
+// form.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     const name = document.querySelector('form input[name="name"]').value;
+//     const email = document.querySelector('form input[name="email"]').value;
+//     const message = document.querySelector('form textarea[name="message"]').value;
+//     if (name.trim() === '') {
         
-    }
-    if (email.trim() === '') {
-        alert('Email is required');
-        return;
-    }
-    if (message.trim() === '') {
-        alert('Message is required');
-        return;
-    }
-    alert('Form submitted successfully');
-    form.reset();
-});
+//     }
+//     if (email.trim() === '') {
+//         alert('Email is required');
+//         return;
+//     }
+//     if (message.trim() === '') {
+//         alert('Message is required');
+//         return;
+//     }
+//     alert('Form submitted successfully');
+//     form.reset();
+// });
 
 
 
